@@ -1,0 +1,153 @@
+ *{   /* Gruvbox dark colors */
+    
+    highlight: bold italic;
+    scrollbar: true;
+
+
+    gruvbox-dark-bg0:          #282828;
+    gruvbox-dark-bg0-soft:     #32302f;
+    gruvbox-dark-bg3:          #665c54;
+    gruvbox-dark-fg0:          #fbf1c7;
+    gruvbox-dark-fg1:          #ebdbb2;
+    gruvbox-dark-red-dark:     #cc241d;
+    gruvbox-dark-red-light:    #fb4934;
+    gruvbox-dark-yellow-dark:  #d79921;
+    gruvbox-dark-yellow-light: #fabd2f;
+    gruvbox-dark-gray:         #a89984;
+
+    /* Theme colors */
+    background:                  @gruvbox-dark-bg0;
+    background-color:            @background;
+    foreground:                  @gruvbox-dark-fg1;
+    border-color:                @gruvbox-dark-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @gruvbox-dark-bg0-soft;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @gruvbox-dark-bg3;
+    selected-normal-foreground:  @gruvbox-dark-fg0;
+
+    active-background:           @gruvbox-dark-yellow-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @gruvbox-dark-yellow-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @gruvbox-dark-red-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @gruvbox-dark-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+#window {
+    background-color: 			@background-color;
+	children: 					[mainbox];
+}
+
+#mainbox {
+    border:  					0;
+	orientation:				vertical;
+	children: 					[ entry,message,listview,mode-switcher ];
+}
+
+#entry {
+	expand: 					false;
+	text-color:					@normal-foreground;
+    padding: 					10px 0px 10px 0px ; 				//padding between two lines
+	border: 					0 0 1px;
+	border-color: 				grey;
+	margin:						30px 30px 0px 30px;
+}
+
+#sidebar {
+	expand: false;
+}
+
+#textbox {  													// mesg box
+	horizontal-align: 			0;
+	background-color: 			silver;
+    padding: 					10px 20px 10px 20px ; 				
+	text-color:                 #000;
+}
+
+#listview {
+    border:       				0px 0px 0px ;
+    border-color: 				grey;
+	padding:                    20 30 70 30;
+}
+
+
+#mode-switcher {
+    /* border:       				1px 0px 0px 0px; */
+   	/* border-color: 				grey; */
+	/* padding:                    	0 30 10 30; */
+	margin:						10px 30px 30px 30px;
+}
+
+button { 
+	padding: 8px; 
+}
+
+#button.selected {
+    background-color: 			@selected-normal-background;
+    text-color:       			@selected-normal-foreground;
+}
+
+#element {
+    border:  					0;
+    padding: 					10px 20px 10px 20px ; 				
+}
+
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+
+
