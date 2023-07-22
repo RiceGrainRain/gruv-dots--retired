@@ -1,0 +1,2 @@
+# bspwm-dots
+Red Dots
